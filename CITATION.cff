@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata below."
+title: "it-admin-agent-guardrails"
+abstract: "A skill for Claude Code, Codex, Cursor and OpenCode that makes PowerShell administration scripts safe by default, with 26 checker rules for dry runs, secrets, blast radius, least privilege and approval gates."
+type: software
+authors:
+  - family-names: "Puliyappottammal"
+    given-names: "Jijesh"
+repository-code: "https://github.com/pJijesh/it-admin-agent-guardrails"
+url: "https://github.com/pJijesh/it-admin-agent-guardrails"
+license: MIT
+version: 1.0.0
+date-released: "2026-11-11"
+keywords:
+  - agent-skills
+  - powershell
+  - microsoft-graph
+  - microsoft-365
+  - entra-id
+  - intune
+  - it-administration
+  - guardrails
+  - claude-code
+  - codex
+  - cursor
+  - opencode

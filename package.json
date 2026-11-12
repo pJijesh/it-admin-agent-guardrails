@@ -1,0 +1,21 @@
+{
+  "name": "it-admin-agent-guardrails",
+  "version": "1.0.0",
+  "description": "A skill for Claude Code, Codex, Cursor and OpenCode that makes PowerShell administration scripts safe by default, with 26 checker rules for dry runs, secrets, blast radius, least privilege and approval gates.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Puliyappottammal Jijesh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pJijesh/it-admin-agent-guardrails.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "test": "node --test",
+    "check:examples": "node skills/it-admin-guardrails/scripts/check-ps.mjs examples/safe skills/it-admin-guardrails/templates"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

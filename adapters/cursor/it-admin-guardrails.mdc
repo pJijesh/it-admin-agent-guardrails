@@ -1,0 +1,32 @@
+---
+description: Rules and a checker for PowerShell IT administration scripts: read-only or dry-run by default, no secrets, least privilege, approval gates
+globs:
+alwaysApply: false
+---
+
+# IT admin guardrails
+
+Write, change and review PowerShell for IT administration (Microsoft Graph, Microsoft 365, Entra ID, Intune, Active Directory, Exchange Online) so it is read-only or dry-run by default. A bundled checker enforces the mechanical rules.
+
+## Ground rules
+
+1. Read before you write. Start read-only. Add a change only when asked.
+2. Every change is a dry run until someone says otherwise: SupportsShouldProcess, ShouldProcess before each change, default to a dry run, explicit -Apply.
+3. Act on a named, reviewed list, never "all users". Cap changes with -MaxChanges and show the count first.
+4. No secrets in a script, a log or a chat. Interactive sign-in, a certificate or a vault.
+5. Least permission: read scripts ask for Read scopes. Name every scope and why.
+6. Always needs a person's yes: wipe or delete devices, role and group privilege, mail forwarding and delegation, authentication methods, Conditional Access, switching a protection off.
+7. Leave a trail: a CSV or log of every object and result. Stop on the first unexpected error.
+8. Never run the script for the person unless asked. Show the script, the checker result and what a dry run does.
+9. Never invent tenant names, domains, ids or accounts. Use parameters.
+
+## Steps
+
+1. Ask, one question at a time: what changes, for which named accounts or devices, who approves.
+2. Write the read-only version first. Its output is the list the person reviews.
+3. Write the change version with SupportsShouldProcess, a $Apply switch, $WhatIfPreference set when not applying, -MaxChanges, try/catch and a log.
+4. Run `node {{SCRIPTS}}/check-ps.mjs <file-or-folder>`. Fix every error; fix or explain every warning.
+5. Override a rule only with `# guardrail-allow PSG0xx: reason` naming who approved it. Never to make the checker pass.
+6. Report: what it does, what a dry run shows, scopes needed, checker result, what you could not verify, what needs approval before -Apply.
+
+A clean checker result means no known pattern was found, not that the script is safe.

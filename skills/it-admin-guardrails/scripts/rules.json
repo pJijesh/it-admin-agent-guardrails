@@ -1,0 +1,30 @@
+{
+  "rules": [
+    { "id": "PSG001", "severity": "error", "summary": "A secret, password or token is written into the script" },
+    { "id": "PSG002", "severity": "error", "summary": "The script changes state but does not support -WhatIf (no SupportsShouldProcess)" },
+    { "id": "PSG003", "severity": "warning", "summary": "SupportsShouldProcess is declared but ShouldProcess is never called" },
+    { "id": "PSG004", "severity": "warning", "summary": "The script changes state but does not default to a dry run" },
+    { "id": "PSG005", "severity": "error", "summary": "-Confirm:$false on a destructive command" },
+    { "id": "PSG006", "severity": "error", "summary": "A bulk change over every object (-All) with no filter, limit or guard" },
+    { "id": "PSG007", "severity": "warning", "summary": "A script that only reads asks for a write permission scope" },
+    { "id": "PSG008", "severity": "error", "summary": "Execution policy is set to Bypass or Unrestricted" },
+    { "id": "PSG009", "severity": "error", "summary": "Code is downloaded and executed" },
+    { "id": "PSG010", "severity": "warning", "summary": "Invoke-Expression is used" },
+    { "id": "PSG011", "severity": "error", "summary": "TLS or certificate validation is weakened" },
+    { "id": "PSG012", "severity": "warning", "summary": "A tenant, object or application GUID is hard-coded" },
+    { "id": "PSG013", "severity": "error", "summary": "A security protection is switched off or excluded" },
+    { "id": "PSG014", "severity": "warning", "summary": "The script creates a scheduled task, service or start-up entry" },
+    { "id": "PSG015", "severity": "error", "summary": "A secret or token is written to the console, a log or a file" },
+    { "id": "PSG016", "severity": "warning", "summary": "The script changes state with no error handling" },
+    { "id": "PSG017", "severity": "warning", "summary": "The script changes state but records nothing about what it did" },
+    { "id": "PSG018", "severity": "error", "summary": "An irreversible device action (wipe, retire, delete)" },
+    { "id": "PSG019", "severity": "error", "summary": "A Conditional Access policy is created or updated as enabled instead of report-only" },
+    { "id": "PSG020", "severity": "error", "summary": "Mail forwarding, redirect or mailbox delegation is changed" },
+    { "id": "PSG021", "severity": "error", "summary": "A directory role or privileged group membership is assigned" },
+    { "id": "PSG022", "severity": "error", "summary": "A user's authentication methods are removed or reset" },
+    { "id": "PSG023", "severity": "warning", "summary": "Remove-Item -Recurse -Force on a variable or wildcard path" },
+    { "id": "PSG024", "severity": "warning", "summary": "Errors are silenced on a command that changes state" },
+    { "id": "PSG025", "severity": "warning", "summary": "A deprecated Azure AD or MSOnline module is used" },
+    { "id": "PSG026", "severity": "error", "summary": "A guardrail-allow comment has no reason" }
+  ]
+}

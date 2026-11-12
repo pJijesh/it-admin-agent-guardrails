@@ -1,0 +1,203 @@
+{
+  "files": 3,
+  "errors": 18,
+  "warnings": 10,
+  "findings": [
+    {
+      "file": "device-cleanup.ps1",
+      "line": 3,
+      "rule": "PSG006",
+      "severity": "error",
+      "message": "this loop changes every object returned by -All; filter the set, cap the number of changes and show a count first"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 4,
+      "rule": "PSG002",
+      "severity": "error",
+      "message": "a script that changes state must declare [CmdletBinding(SupportsShouldProcess)] so -WhatIf works"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 4,
+      "rule": "PSG016",
+      "severity": "warning",
+      "message": "no error handling; set $ErrorActionPreference to Stop and catch failures so a half-finished change is visible"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 4,
+      "rule": "PSG017",
+      "severity": "warning",
+      "message": "nothing records what the script did; write a log or a CSV of every change"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 4,
+      "rule": "PSG018",
+      "severity": "error",
+      "message": "wipe, retire and delete cannot be undone; require a named device list and a person to approve"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 6,
+      "rule": "PSG013",
+      "severity": "error",
+      "message": "this switches off or excludes a security protection; do not do it from an automated script"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 7,
+      "rule": "PSG013",
+      "severity": "error",
+      "message": "this switches off or excludes a security protection; do not do it from an automated script"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 8,
+      "rule": "PSG014",
+      "severity": "warning",
+      "message": "this creates something that persists; confirm it is intended and document it"
+    },
+    {
+      "file": "device-cleanup.ps1",
+      "line": 9,
+      "rule": "PSG009",
+      "severity": "error",
+      "message": "never download and run code; fetch it, review it, then run a pinned copy"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 2,
+      "rule": "PSG025",
+      "severity": "warning",
+      "message": "the Azure AD and MSOnline modules are deprecated by Microsoft; use Microsoft Graph PowerShell"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 4,
+      "rule": "PSG002",
+      "severity": "error",
+      "message": "a script that changes state must declare [CmdletBinding(SupportsShouldProcess)] so -WhatIf works"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 4,
+      "rule": "PSG016",
+      "severity": "warning",
+      "message": "no error handling; set $ErrorActionPreference to Stop and catch failures so a half-finished change is visible"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 4,
+      "rule": "PSG017",
+      "severity": "warning",
+      "message": "nothing records what the script did; write a log or a CSV of every change"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 4,
+      "rule": "PSG020",
+      "severity": "error",
+      "message": "forwarding and delegation are a common route for data theft; change them only with explicit approval"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 5,
+      "rule": "PSG021",
+      "severity": "error",
+      "message": "assigning a privileged role needs explicit approval and should be time-limited"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 6,
+      "rule": "PSG022",
+      "severity": "error",
+      "message": "removing or resetting authentication methods weakens an account; require identity verification first"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 7,
+      "rule": "PSG019",
+      "severity": "error",
+      "message": "create Conditional Access policies as enabledForReportingButNotEnforced first and enable them after reviewing the sign-in impact"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 8,
+      "rule": "PSG024",
+      "severity": "warning",
+      "message": "a failed change would go unnoticed; let it fail or catch and log it"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 9,
+      "rule": "PSG011",
+      "severity": "error",
+      "message": "do not weaken TLS or certificate validation; fix the certificate or the trust store"
+    },
+    {
+      "file": "mail-and-roles.ps1",
+      "line": 10,
+      "rule": "PSG023",
+      "severity": "warning",
+      "message": "recursive forced delete on a variable or wildcard path; check the path and add -WhatIf"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 2,
+      "rule": "PSG008",
+      "severity": "error",
+      "message": "do not weaken the execution policy; sign the script or run it from a trusted path"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 3,
+      "rule": "PSG001",
+      "severity": "error",
+      "message": "a secret appears to be written into the script; read it from a vault, a certificate or an interactive sign-in"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 4,
+      "rule": "PSG012",
+      "severity": "warning",
+      "message": "a GUID is hard-coded; pass tenant, object and application ids as parameters"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 6,
+      "rule": "PSG002",
+      "severity": "error",
+      "message": "a script that changes state must declare [CmdletBinding(SupportsShouldProcess)] so -WhatIf works"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 6,
+      "rule": "PSG005",
+      "severity": "error",
+      "message": "-Confirm:$false removes the last safety prompt from a destructive command"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 6,
+      "rule": "PSG006",
+      "severity": "error",
+      "message": "this changes every object returned by -All; filter the set, cap the number of changes and show a count first"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 6,
+      "rule": "PSG016",
+      "severity": "warning",
+      "message": "no error handling; set $ErrorActionPreference to Stop and catch failures so a half-finished change is visible"
+    },
+    {
+      "file": "offboard-everyone.ps1",
+      "line": 7,
+      "rule": "PSG015",
+      "severity": "error",
+      "message": "a secret or token would be written out; log what happened, not the credential"
+    }
+  ]
+}
